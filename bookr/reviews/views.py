@@ -2,8 +2,7 @@ from django.shortcuts import render
 
 
 def index(request):
-    name = "Brandon"
-    return render(request, "base.html", {"name": name})
+    return render(request, "base.html")
 
 
 def book_search(request):
