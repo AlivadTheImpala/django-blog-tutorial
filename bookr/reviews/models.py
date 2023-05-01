@@ -2,7 +2,7 @@ from django.contrib import auth
 from django.db import models
 
 
-# Create your models here.
+# Models are djangos way of making database tables for you, so you dont have to write SQL commands .
 
 
 class Publisher(models.Model):
