@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+# import reviews.views
 
+# admin.site.site_header = "Bookr Admin HEADER"
+# admin.site.site_title = "Bookr Admin SITE TITLE"
+# admin.site.index_title = "Bookr Admin INDEX"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
