@@ -1,2 +1,3 @@
-# django-blog-tutorial
-djagno blog tutorial for it112 
+# The Bookr App
+This repo mainly holds the code for the Bookr project found in Packt Publishings **Web Development with Django**
+
