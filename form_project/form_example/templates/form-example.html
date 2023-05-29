@@ -5,8 +5,11 @@
     <title>Title</title>
 </head>
 <body>
+<!--{{method}} can be found in views under the return render -->
+<h4>Method: {{method}}</h4>
 
 <form method='post'>
+    {% csrf_token %}
   <p>
 
     <label for="id_text_input">Text Input</label><br>
