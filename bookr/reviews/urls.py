@@ -11,5 +11,5 @@ urlpatterns = [
     path('publishers/<int:pk>/', views.publisher_edit, name='publisher_edit'),
     path('publishers/new/', views.publisher_edit, name='publisher_create'),
     # path('api/first_api_view/', api_views.first_api_view),
-    path('api/all_books/', api_views.all_books, name='all_books'),
+    path('api/all_books/', api_views.AllBooks.as_view(), name='all_books'),
 ]

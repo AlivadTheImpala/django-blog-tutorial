@@ -1,27 +1,17 @@
-#  serializers.py
-#  serializing our data converts python attributes into JSON, which our front-end can read.
-#  refer to api_views.py
-
 from rest_framework import serializers
-from .models import BookContributor
+
+from .models import Book, Publisher
 
 
-class PublisherSerializer(serializers.Serializer):
-    name = serializers.CharField()
-    website = serializers.URLField()
-    email = serializers.EmailField()
+class PublisherSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Publisher
+        fields = ['name', 'website', 'email']
 
 
-class BookSerializer(serializers.Serializer):
-    title = serializers.CharField()
-    publication_date = serializers.DateField()
-    isbn = serializers.CharField()
+class BookSerializer(serializers.ModelSerializer):
     publisher = PublisherSerializer()
 
-
-class ContributionSerializer(serializers.ModelSerializer):
-    book = BookSerializer()
-
     class Meta:
-        model = BookContributor
-        fields = ['book', 'role']
+        model = Book
+        fields = ['title', 'publication_date', 'isbn', 'publisher']
