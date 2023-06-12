@@ -1,3 +1,7 @@
+#  api_views.py
+#  we organize our api views into this file. Here we create a view that returns all our books.
+#  well create a variable to hold all the books which we can then use to serialize the entire book.
+#  the attributes within the Book model has already been serialized in serializers.py
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 

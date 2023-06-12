@@ -1,3 +1,7 @@
+#  serializers.py
+#  serializing our data converts python attributes into JSON, which our front-end can read.
+#  refer to api_views.py
+
 from rest_framework import serializers
 from .models import BookContributor
 
